@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabajara Airlines | Sua próxima viagem começa aqui</title>
+
+<!-- Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-airplane-engines-fill me-2"></i>Tabajara<span class="text-accent">Airlines</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pacotes">Pacotes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clima">Clima</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item"><a class="btn btn-accent btn-sm ms-lg-3 px-3" href="#reserva">Reservar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="inicio" class="hero d-flex align-items-center">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white">
+        <span class="badge badge-accent mb-3">✈ Voe com quem entende de viagem</span>
+        <h1 class="display-4 fw-800 mb-3">Sua próxima aventura decola com a <span class="text-accent">Tabajara Airlines</span></h1>
+        <p class="lead mb-4 opacity-90">Passagens, pacotes e roteiros pensados para você viver experiências inesquecíveis, com o melhor custo-benefício do céu.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#pacotes" class="btn btn-accent btn-lg px-4">Ver pacotes</a>
+          <a href="#reserva" class="btn btn-outline-light btn-lg px-4">Fazer reserva</a>
+        </div>
+        <div class="row mt-5 g-3">
+          <div class="col-4"><h3 class="fw-800 mb-0">120+</h3><small class="opacity-75">Destinos</small></div>
+          <div class="col-4"><h3 class="fw-800 mb-0">15 anos</h3><small class="opacity-75">De história</small></div>
+          <div class="col-4"><h3 class="fw-800 mb-0">50 mil</h3><small class="opacity-75">Clientes felizes</small></div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-none d-lg-block text-center">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80" alt="Avião voando" class="hero-img rounded-4 shadow-lg">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BUSCA DE VOO -->
+<section class="search-box container">
+  <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
+    <form class="row g-3 align-items-end needs-validation" id="reserva" novalidate>
+      <div class="col-md-3">
+        <label class="form-label fw-600">Origem</label>
+        <input type="text" class="form-control" placeholder="São Paulo (GRU)" required>
+        <div class="invalid-feedback">Informe a origem.</div>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label fw-600">Destino</label>
+        <input type="text" class="form-control" placeholder="Rio de Janeiro (SDU)" required>
+        <div class="invalid-feedback">Informe o destino.</div>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label fw-600">Ida</label>
+        <input type="date" class="form-control" required>
+        <div class="invalid-feedback">Informe a data de ida.</div>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label fw-600">Volta</label>
+        <input type="date" class="form-control" required>
+        <div class="invalid-feedback">Informe a data de volta.</div>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary-custom w-100"><i class="bi bi-search me-1"></i>Buscar</button>
+      </div>
+      <div class="col-12 d-none" id="reservaSucesso">
+        <div class="alert alert-success mb-0">Busca realizada com sucesso!</div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="container py-5 mt-4">
+  <div class="text-center mb-5">
+    <span class="eyebrow">Sobre nós</span>
+    <h2 class="fw-800">Quem é a Tabajara Airlines</h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="sobre-card p-4 h-100">
+        <i class="bi bi-airplane-engines-fill fs-2 text-primary-custom"></i>
+        <h5 class="fw-700 mt-2">Nossa história</h5>
+        <p class="mb-0">Há 15 anos conectamos pessoas a mais de 120 destinos, com passagens e pacotes que cabem no bolso.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="sobre-card p-4 h-100">
+        <i class="bi bi-compass-fill fs-2 text-primary-custom"></i>
+        <h5 class="fw-700 mt-2">Nossa missão</h5>
+        <p class="mb-0">Tornar viajar simples: preço justo, atendimento rápido e suporte quando você mais precisa.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="sobre-card p-4 h-100">
+        <i class="bi bi-heart-fill fs-2 text-primary-custom"></i>
+        <h5 class="fw-700 mt-2">Nossos valores</h5>
+        <p class="mb-0">Transparência nas tarifas, cuidado com cada passageiro e respeito ao tempo de quem viaja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINOS -->
+<section id="destinos" class="container py-5 mt-4">
+  <div class="text-center mb-5">
+    <span class="eyebrow">Destinos em alta</span>
+    <h2 class="fw-800">Para onde a Tabajara te leva</h2>
+  </div>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card destino-card h-100 border-0 shadow-sm">
+        <img src="rj.jpg" class="card-img-top" alt="Rio de Janeiro">
+        <div class="card-body">
+          <span class="badge badge-blue mb-2">Nacional</span>
+          <h5 class="card-title fw-700">Rio de Janeiro</h5>
+          <p class="card-text text-muted">Praias icônicas, Cristo Redentor e muita energia carioca.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-primary-custom">a partir de R$ 389</strong>
+            <a href="#" class="btn btn-sm btn-accent">Ver oferta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card destino-card h-100 border-0 shadow-sm">
+        <img src="fernando.jpg" class="card-img-top" alt="Fernando de Noronha">
+        <div class="card-body">
+          <span class="badge badge-blue mb-2">Nacional</span>
+          <h5 class="card-title fw-700">Fernando de Noronha</h5>
+          <p class="card-text text-muted">Águas cristalinas e um dos arquipélagos mais belos do mundo.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-primary-custom">a partir de R$ 1.290</strong>
+            <a href="#" class="btn btn-sm btn-accent">Ver oferta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card destino-card h-100 border-0 shadow-sm">
+        <img src="obelisco.jpeg" class="card-img-top" alt="Buenos Aires">
+        <div class="card-body">
+          <span class="badge badge-yellow-outline mb-2">Internacional</span>
+          <h5 class="card-title fw-700">Buenos Aires</h5>
+          <p class="card-text text-muted">Tango, gastronomia e arquitetura europeia na América do Sul.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-primary-custom">a partir de R$ 980</strong>
+            <a href="#" class="btn btn-sm btn-accent">Ver oferta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PACOTES -->
+<section id="pacotes" class="pacotes-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-white">
+        <span class="eyebrow text-accent">Pacotes completos</span>
+        <h2 class="fw-800 mb-3">Passagem + hospedagem, tudo em um só lugar</h2>
+        <p class="opacity-90 mb-4">Monte seu roteiro com voos, hotel e traslado com a garantia Tabajara de melhor preço.</p>
+        <a href="#reserva" class="btn btn-accent btn-lg">Montar meu pacote</a>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-sm-6">
+            <div class="pacote-item p-4 rounded-4 h-100">
+              <i class="bi bi-airplane-fill fs-2 text-accent"></i>
+              <h5 class="fw-700 mt-3 text-white">Voos diretos</h5>
+              <p class="text-white-50 mb-0 small">Menos escalas, mais tempo de destino.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="pacote-item p-4 rounded-4 h-100">
+              <i class="bi bi-building fs-2 text-accent"></i>
+              <h5 class="fw-700 mt-3 text-white">Hotéis selecionados</h5>
+              <p class="text-white-50 mb-0 small">Parceiros avaliados pelos nossos clientes.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="pacote-item p-4 rounded-4 h-100">
+              <i class="bi bi-shield-check fs-2 text-accent"></i>
+              <h5 class="fw-700 mt-3 text-white">Seguro viagem</h5>
+              <p class="text-white-50 mb-0 small">Viaje com tranquilidade em qualquer destino.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="pacote-item p-4 rounded-4 h-100">
+              <i class="bi bi-headset fs-2 text-accent"></i>
+              <h5 class="fw-700 mt-3 text-white">Suporte 24h</h5>
+              <p class="text-white-50 mb-0 small">Time Tabajara sempre disponível pra você.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- cadastro -->
+<section id="cadastro" class="container py-5">
+  <div class="text-center mb-5">
+    <span class="eyebrow">Área de cadastro</span>
+    <h2 class="fw-800">Cadastre-se e receba ofertas exclusivas</h2>
+    <p class="text-muted">Informe seu CEP e o endereço é completado automaticamente (API ViaCEP).</p>
+  </div>
+  <form id="formCadastro" class="row g-3 needs-validation mx-auto" style="max-width:900px" novalidate>
+    <div class="col-md-6">
+      <label class="form-label fw-600">Nome completo</label>
+      <input type="text" class="form-control" id="cadNome" required>
+      <div class="invalid-feedback">Informe seu nome.</div>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-600">E-mail</label>
+      <input type="email" class="form-control" id="cadEmail" required>
+      <div class="invalid-feedback">Informe um e-mail válido.</div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label fw-600">Telefone</label>
+      <input type="tel" class="form-control" id="cadTelefone" placeholder="(00) 00000-0000" inputmode="tel" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Telefone com DDD, ex.: (11) 91234-5678" required>
+      <div class="invalid-feedback">Informe um telefone válido com DDD, ex.: (11) 91234-5678.</div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label fw-600">CEP</label>
+      <input type="text" class="form-control" id="cadCep" maxlength="9" placeholder="00000-000" inputmode="numeric" pattern="\d{5}-?\d{3}" title="CEP com 8 dígitos, ex.: 01310-100" required>
+      <div class="invalid-feedback">Informe um CEP válido, com 8 dígitos.</div>
+      <div id="cepStatus" class="form-text"></div>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-600">Logradouro</label>
+      <input type="text" class="form-control" id="cadLogradouro" required>
+      <div class="invalid-feedback">Informe o CEP para preencher automaticamente.</div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label fw-600">Número</label>
+      <input type="text" class="form-control" id="cadNumero" required>
+      <div class="invalid-feedback">Informe o número.</div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label fw-600">Bairro</label>
+      <input type="text" class="form-control" id="cadBairro" required>
+      <div class="invalid-feedback">Informe o bairro.</div>
+    </div>
+    <div class="col-md-8">
+      <label class="form-label fw-600">Cidade</label>
+      <input type="text" class="form-control" id="cadCidade" required>
+      <div class="invalid-feedback">Informe a cidade.</div>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label fw-600">UF</label>
+      <input type="text" class="form-control" id="cadUf" maxlength="2" required>
+      <div class="invalid-feedback">Informe a UF.</div>
+    </div>
+    <div class="col-12 text-center mt-4">
+      <button type="submit" class="btn btn-primary-custom px-4">Concluir cadastro</button>
+      <div id="cadastroSucesso" class="alert alert-success d-none mt-3">Cadastro realizado com sucesso!</div>
+    </div>
+  </form>
+</section>
+
+<!-- CONSULTA DE CLIMA -->
+<section id="clima" class="clima-section py-5">
+  <div class="container">
+    <div class="text-center mb-5 text-white">
+      <span class="eyebrow text-accent">Planeje sua viagem</span>
+      <h2 class="fw-800">Consulte o clima do seu destino</h2>
+      <p class="opacity-90 mb-0">Dados em tempo real via API Open-Meteo.</p>
+    </div>
+    <form id="formClima" class="row justify-content-center g-2 mb-5" novalidate>
+      <div class="col-sm-6 col-md-4">
+        <input type="text" id="climaCidade" class="form-control form-control-lg" placeholder="Digite uma cidade (ex: Rio de Janeiro)" required>
+      </div>
+      <div class="col-sm-auto">
+        <button type="submit" class="btn btn-accent btn-lg px-4"><i class="bi bi-cloud-sun-fill me-1"></i>Consultar</button>
+      </div>
+    </form>
+    <div id="climaMensagem" class="text-center text-white mb-3"></div>
+    <div id="climaResultado" class="row g-3 justify-content-center"></div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="container py-5">
+  <div class="text-center mb-5">
+    <span class="eyebrow">Quem voou, aprovou</span>
+    <h2 class="fw-800">Depoimentos de passageiros</h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="depoimento-card p-4 h-100">
+        <i class="bi bi-quote fs-2 text-primary-custom"></i>
+        <p class="mb-3">"Melhor experiência de compra de passagem que já tive. Preço justo e atendimento rápido."</p>
+        <strong>Marina Souza</strong><br><small class="text-muted">São Paulo</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="depoimento-card p-4 h-100">
+        <i class="bi bi-quote fs-2 text-primary-custom"></i>
+        <p class="mb-3">"Pacote para Noronha impecável, do voo à hospedagem. Recomendo demais a Tabajara."</p>
+        <strong>Carlos Nogueira</strong><br><small class="text-muted">Belo Horizonte</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="depoimento-card p-4 h-100">
+        <i class="bi bi-quote fs-2 text-primary-custom"></i>
+        <p class="mb-3">"Suporte 24h fez toda diferença quando precisei remarcar meu voo de última hora."</p>
+        <strong>Juliana Prado</strong><br><small class="text-muted">Curitiba</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter py-5">
+  <div class="container text-center text-white">
+    <h3 class="fw-800 mb-2">Não perca nossas promoções</h3>
+    <p class="opacity-90 mb-4">Assine e receba ofertas exclusivas de voos e pacotes direto no seu e-mail.</p>
+    <form id="formNewsletter" class="row justify-content-center g-2 needs-validation" novalidate>
+      <div class="col-sm-6 col-md-4">
+        <input type="email" class="form-control form-control-lg" placeholder="Seu melhor e-mail" aria-label="E-mail" required>
+        <div class="invalid-feedback">Informe um e-mail válido.</div>
+      </div>
+      <div class="col-sm-auto">
+        <button type="submit" class="btn btn-accent btn-lg px-4">Assinar</button>
+      </div>
+      <div class="col-12 col-md-6 d-none" id="newsletterSucesso">
+        <div class="alert alert-success mb-0">Inscrição realizada com sucesso!</div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-6">
+      <span class="eyebrow">Fale com a gente</span>
+      <h2 class="fw-800 mb-4">Ainda tem dúvidas?</h2>
+      <form id="formContato" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label class="form-label fw-600">Nome</label>
+          <input type="text" class="form-control" placeholder="Seu nome" required>
+          <div class="invalid-feedback">Informe seu nome.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-600">E-mail</label>
+          <input type="email" class="form-control" placeholder="voce@email.com" required>
+          <div class="invalid-feedback">Informe um e-mail válido.</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label fw-600">Mensagem</label>
+          <textarea class="form-control" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+          <div class="invalid-feedback">Escreva sua mensagem.</div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary-custom px-4">Enviar mensagem</button>
+          <div id="contatoSucesso" class="alert alert-success d-none mt-3">Mensagem enviada com sucesso!</div>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div class="contato-info p-4 rounded-4 h-100">
+        <h5 class="fw-700 mb-4">Central de atendimento</h5>
+        <p><i class="bi bi-telephone-fill text-accent me-2"></i> 0800 123 4567</p>
+        <p><i class="bi bi-envelope-fill text-accent me-2"></i> contato@tabajaraairlines.com</p>
+        <p><i class="bi bi-geo-alt-fill text-accent me-2"></i> Av. das Nações, 1000 — São Paulo/SP</p>
+        <hr class="border-light opacity-25">
+        <div class="d-flex gap-3 fs-4">
+          <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <p class="mb-0">&copy; 2026 Tabajara Airlines. Todos os direitos reservados.</p>
+    <p class="mb-0 small opacity-75">Projeto acadêmico — Programação Web II · 2DS3</p>
+    <p class="w-100 mt-3 mb-0 small opacity-75">Integrantes: Livia Oliveira Ramos e Mariana Freire dos Reis</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

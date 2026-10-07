@@ -1,0 +1,200 @@
+:root {
+  --amarelo:   #FFF400;
+  --roxo-azul: #4000FF;
+  --branco:    #FFFFFF;
+  --preto:     #000000;
+  --azul:      #003EFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--preto);
+  background-color: var(--branco);
+}
+
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+
+.text-accent { color: var(--amarelo) !important; }
+.text-primary-custom { color: var(--azul) !important; }
+
+.eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--azul);
+  margin-bottom: .5rem;
+}
+
+.navbar {
+  background-color: var(--preto);
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--branco) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--branco) !important;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--amarelo) !important;
+}
+
+.btn-accent {
+  background-color: var(--amarelo);
+  color: var(--preto);
+  font-weight: 700;
+  border: 2px solid var(--amarelo);
+}
+.btn-accent:hover {
+  background-color: var(--branco);
+  color: var(--preto);
+  border-color: var(--preto);
+}
+
+.btn-primary-custom {
+  background-color: var(--azul);
+  color: var(--branco);
+  font-weight: 700;
+  border: none;
+}
+.btn-primary-custom:hover {
+  background-color: var(--roxo-azul);
+  color: var(--branco);
+}
+
+.hero {
+  min-height: 88vh;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--roxo-azul) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  max-width: 100%;
+  border: 4px solid var(--amarelo);
+}
+
+.badge-accent {
+  background-color: var(--amarelo);
+  color: var(--preto);
+  font-weight: 700;
+  padding: .5rem 1rem;
+  border-radius: 50px;
+}
+
+.search-box {
+  margin-top: -60px;
+  position: relative;
+  z-index: 5;
+}
+
+.search-box .card {
+  background-color: var(--branco);
+  border-top: 5px solid var(--amarelo);
+}
+
+
+.destino-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.destino-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.12) !important;
+}
+.destino-card .card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+
+.badge-blue {
+  background-color: var(--azul);
+  color: var(--branco);
+  font-weight: 600;
+}
+.badge-yellow-outline {
+  background-color: transparent;
+  color: var(--roxo-azul);
+  border: 1px solid var(--roxo-azul);
+  font-weight: 600;
+}
+
+
+.pacotes-section {
+  background-color: var(--preto);
+}
+
+.pacote-item {
+  background-color: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+
+.depoimento-card,
+.sobre-card {
+  background-color: var(--branco);
+  box-shadow: var(--bs-box-shadow-sm);
+  border-left: 5px solid var(--roxo-azul);
+  border-radius: .75rem;
+}
+
+
+.newsletter {
+  background-color: var(--roxo-azul);
+}
+.newsletter .invalid-feedback {
+  color: var(--amarelo);
+}
+
+.contato-info {
+  background-color: var(--preto);
+  color: var(--branco);
+}
+.contato-info p { margin-bottom: .9rem; }
+
+
+
+#cadastro input[readonly] {
+  background-color: var(--branco);
+}
+
+
+.clima-section {
+  background: linear-gradient(135deg, var(--roxo-azul) 0%, var(--azul) 100%);
+}
+
+.clima-card {
+  background-color: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 1rem;
+  color: var(--branco);
+  padding: 1.5rem;
+  min-width: 220px;
+}
+
+.clima-card .temperatura {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--amarelo);
+}
+
+.footer {
+  background-color: var(--preto);
+  color: var(--branco);
+}
